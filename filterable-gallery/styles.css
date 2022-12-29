@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway";
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #fff;
+  width: 100%;
+  padding: 5px 0;
+}
+
+.gallery li {
+  list-style: none;
+  color: #333;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.itembox {
+  margin: 5px;
+  display: block;
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.itembox img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.gallery .active {
+  color: #e84545;
+  border-color: #c70039;
+}
+
+/* Animations */
+.show {
+  animation: show_image 0.5s ease-in forwards;
+  transform-origin: center;
+}
+.hide {
+  animation: hide_image 0.5s ease-in forwards;
+  transform-origin: center;
+}
+
+@keyframes show_image {
+  0% {
+    transform: scale(0);
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes hide_image {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .itembox {
+    width: 200px;
+    height: 200px;
+  }
+}
