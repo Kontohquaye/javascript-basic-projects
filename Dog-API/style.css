@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: rgba(255, 108, 54, 0.103);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-weight: 500;
+  position: relative;
+}
+
+.notification {
+  position: absolute;
+  width: 400px;
+  top: 30px;
+  right: 10px;
+}
+
+.notification > * {
+  margin-bottom: 10px;
+}
+
+.toast {
+  background-color: #fff;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 15px;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.column {
+  display: flex;
+  align-items: center;
+}
+
+.fa-circle-check {
+  padding-right: 5px;
+  color: #4bb543;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container > * {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  background: #fff;
+  width: 300px;
+  min-height: 200px;
+  max-width: 400px;
+  box-shadow: 0 0 15px #fff;
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+
+button {
+  width: 300px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  font: inherit;
+  color: #fff;
+  text-transform: capitalize;
+  background: rgba(255, 68, 0, 0.726);
+}
+
+button:active {
+  transform: scale(0.8);
+}
+
+/* animation */
+.show {
+  animation: show_toast 0.5s ease-in forwards;
+}
+
+.hide {
+  animation: hide_toast 0.5s ease-in forwards;
+}
+
+@keyframes show_toast {
+  0% {
+    transform: translateX(calc(100% + 20px));
+  }
+  40% {
+    transform: translateX(-10%);
+  }
+  80% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-10%);
+  }
+}
+@keyframes hide_toast {
+  0% {
+    transform: translateX(-10%);
+  }
+  40% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(calc(100% + 20px));
+  }
+}
+
+@media (max-width: 500px) {
+  .notification {
+    width: 300px;
+  }
+  .toast {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 350px) {
+  .notification {
+    width: 250px;
+    padding: 2px 2px;
+  }
+}
+@media (max-width: 320px) {
+  .img {
+    width: 200px;
+  }
+  button {
+    width: 200px;
+  }
+}
