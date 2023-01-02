@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e1e1e1;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.circular {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform: scale(2);
+}
+
+.inner-circle {
+  width: 80px;
+  height: 80px;
+  background: #e1e1e1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -40px 0 0 -40px;
+  border-radius: 50%;
+  z-index: 5;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.281);
+}
+
+.number {
+  font-weight: 600;
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bar {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  border-radius: 50%;
+  clip: rect(0, 100px, 100px, 50px);
+}
+
+.circle .bar.right {
+  transform: rotate(180deg);
+}
+
+.progress {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #4158d0;
+  border-radius: 50%;
+  clip: rect(0, 50px, 100px, 0);
+}
+
+.left .progress {
+  animation: left_progress 4s linear forwards;
+  z-index: 1;
+}
+
+.right .progress {
+  animation: right_progress 4s linear forwards;
+  animation-delay: 4s;
+  z-index: 1;
+}
+
+@keyframes left_progress {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes right_progress {
+  100% {
+    transform: rotate(180deg);
+  }
+}
