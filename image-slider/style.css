@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway";
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #343f4f;
+  width: calc(100% - 23px);
+  padding: 0 30px;
+}
+
+.wrapper {
+  max-width: 1200px;
+  position: relative;
+}
+
+.wrapper i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  width: 46px;
+  height: 46px;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 46px;
+  border-radius: 50%;
+}
+
+.wrapper i:first-child {
+  left: -23px;
+  display: none;
+}
+.wrapper i:last-child {
+  right: -23px;
+}
+
+.carousel {
+  white-space: nowrap;
+  font-size: 0;
+  cursor: pointer;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.carousel.dragging {
+  scroll-behavior: auto;
+}
+
+.carousel.dragging img {
+  pointer-events: none;
+}
+
+.carousel img {
+  height: 340px;
+  object-fit: cover;
+  display: inline-block;
+  width: calc(100% / 3);
+  margin-left: 10px;
+}
+
+img:first-child {
+  margin-left: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .carousel img {
+    width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .carousel img {
+    width: 100%;
+    height: auto;
+  }
+}
