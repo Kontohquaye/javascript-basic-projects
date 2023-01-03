@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +13,7 @@ img {
 }
 
 body {
-  font-family: "raleway";
+  font-family: "Poppins", sans-serif;
   height: 100vh;
   background: #e1e1e1;
   display: flex;
