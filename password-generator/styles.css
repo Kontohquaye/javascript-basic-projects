@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #23395d;
+}
+
+.wrapper {
+  background: #fff;
+  width: 450px;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+h2 {
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 50px;
+  font: inherit;
+  font-size: 1.1rem;
+  letter-spacing: 4px;
+  color: #333;
+  outline: none;
+  border-radius: 5px;
+  padding: 0 10px 0;
+  border: 1px solid rgba(51, 51, 51, 0.459);
+  background: none;
+}
+
+.input-box i {
+  position: absolute;
+  right: 1px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 40px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  background: #ccc;
+  display: inline-block;
+  line-height: 50px;
+}
+
+.pass-strenght .strenght {
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.pass-strenght .strenght::after {
+  content: "";
+  position: absolute;
+  background: #f6d84e;
+  width: 50%;
+  height: 400px;
+}
+
+.pass-strenght .strenght#weak::after {
+  width: 20%;
+  background: red;
+}
+
+.pass-strenght .strenght#medium::after {
+  width: 50%;
+  background: #f6d84e;
+}
+
+.pass-strenght .strenght#strong::after {
+  width: 20%;
+  background: green;
+  width: 100%;
+}
+
+.pass-slide {
+  margin: 20px 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.pass-slide span {
+  padding-left: 20px;
+  font-weight: 600;
+}
+
+.pass-slide .range {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.range input {
+  appearance: none;
+  width: 100%;
+  background: #ccc;
+  height: 4px;
+  border-radius: 10px;
+}
+
+.range .slider {
+  width: 50%;
+  height: 4px;
+  background: #333;
+  position: absolute;
+  pointer-events: none;
+}
+
+.range input::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #333;
+  border-radius: 50%;
+}
+
+.details {
+  width: 100%;
+}
+
+h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.settings .options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.option {
+  flex-basis: 50%;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.option input {
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+#lowercase {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.gen-btn {
+  margin: 15px 0 10px;
+}
+
+.gen-btn button {
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font: inherit;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  background: #333;
+  letter-spacing: 2px;
+}
+
+.gen-btn button:active {
+  transform: scale(0.9);
+}
