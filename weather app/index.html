@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>weather app</span>
+        </header>
+
+        <section class="inputs">
+            <p class="info">enter a valid city below</p>
+            <input type="text" spellcheck="false" placeholder="enter city name">
+            <div class="line"></div>
+            <button>use your location</button>
+        </section>
+
+        <section class="weather-part">
+            <img src="icons/cloudy.png" alt="">
+
+            <div class="details">
+                <div class="temp">
+                    <span class="temp">_</span>
+                    <span>°</span>C
+                </div>
+                <div class="weather">__</div>
+                <div class="location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>_, _</span>
+                </div>
+            </div>
+
+            <div class="bottom">
+                <div class="column left">
+                    <i class="fa-solid fa-temperature-low"></i>
+                    <span>
+                        <div class="num feel">_</div>
+                        <div class="text">feels_like</div>
+                    </span>
+                </div>
+                <div class="column right">
+                    <i class="fa-solid fa-droplet"></i>
+                    <span>
+                        <div class="num humid">_</div>
+                        <div class="text">humidity</div>
+                    </span>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="main.js" type="module"></script>
+    <script src="api.js" type="module"></script>
+</body>
+
+</html>

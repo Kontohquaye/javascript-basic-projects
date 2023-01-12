@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: rgba(12, 14, 48, 0.89);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  width: 400px;
+  background: #fff;
+  color: #333;
+  border-radius: 10px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+header span {
+  width: 70%;
+  text-align: center;
+}
+
+.wrapper.active header i {
+  font-size: 1.5rem;
+}
+
+header i {
+  margin: 0 50px 0 10px;
+  font-size: 0;
+  display: none;
+}
+
+.inputs {
+  padding: 20px 10px;
+}
+
+.inputs .info {
+  text-align: center;
+  border-radius: 10px;
+  outline: none;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.wrapper.active .info {
+  display: none;
+}
+
+.wrapper.active .inputs {
+  display: none;
+}
+
+.wrapper.active header span {
+  text-align: center;
+}
+
+.inputs .info.pending {
+  background: rgba(0, 255, 0, 0.363);
+  color: rgb(1, 126, 1);
+}
+
+.inputs .info.error {
+  background: rgba(255, 99, 71, 0.568);
+  color: rgb(170, 28, 2);
+}
+
+.inputs :where(input, button) {
+  width: 100%;
+  border-radius: 10px;
+  font: inherit;
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 5px 0;
+  border: 1px solid #ccc;
+  font-weight: 300;
+  outline: none;
+}
+
+.inputs input:where(:focus) {
+  border: 1px solid rgba(12, 14, 48, 0.89);
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line::after {
+  content: "or";
+  color: #ccc;
+  background: #fff;
+  padding: 0 5px;
+}
+
+button {
+  background: #333;
+  color: #fff;
+  text-transform: capitalize;
+  border: none;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+.wrapper.active .weather-part {
+  display: flex;
+}
+
+.weather-part {
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.weather-part img {
+  width: 200px;
+  margin: 20px 0;
+}
+
+.details {
+  width: 100%;
+  text-align: center;
+}
+.details .temp {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.temp span {
+  font-size: 1rem;
+  margin: 0 4px;
+}
+
+.location {
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+}
+
+.bottom {
+  width: 100%;
+  display: flex;
+  border-top: 1px solid #ccc;
+  margin: 10px 0 0;
+}
+
+.column {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.column span {
+  font-weight: 500;
+}
+
+.column span > * {
+  line-height: 20px;
+}
+
+.column i {
+  margin-right: 15px;
+  font-size: 2rem;
+  color: rgba(12, 14, 48, 0.89);
+}
+
+.left {
+  padding: 10px;
+}
+
+.bottom .column.right {
+  border-left: 1px solid #ccc;
+  padding: 10px;
+}
