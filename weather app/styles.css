@@ -80,6 +80,10 @@ header i {
   color: rgb(170, 28, 2);
 }
 
+.inputs input {
+  background: #fff;
+}
+
 .inputs :where(input, button) {
   width: 100%;
   border-radius: 10px;
